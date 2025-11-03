@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arvella <arvella@student.42perpignan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 14:49:20 by arvella           #+#    #+#             */
-/*   Updated: 2025/11/03 15:16:44 by arvella          ###   ########.fr       */
+/*   Created: 2025/11/03 14:43:22 by arvella           #+#    #+#             */
+/*   Updated: 2025/11/03 14:43:24 by arvella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-
-int		ft_isalnum(int c);
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isprint(int c);
-
-
-#endif
+int	ft_isalnum(int c)
+{
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')
+		|| (c >= '0' && c <= '9'));
+}
