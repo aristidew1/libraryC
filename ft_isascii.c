@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arvella <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: arvella <arvella@student.42perpignan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 12:44:49 by arvella           #+#    #+#             */
-/*   Updated: 2025/11/03 12:46:30 by arvella          ###   ########.fr       */
+/*   Created: 2025/11/03 14:43:46 by arvella           #+#    #+#             */
+/*   Updated: 2025/11/03 14:45:11 by arvella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+int	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 126);
 }
