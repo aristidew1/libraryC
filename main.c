@@ -1,3 +1,4 @@
+/*
 #include "libft.h"
 #include <stdio.h>
 #include <string.h>
@@ -33,11 +34,47 @@ for (int i=0; p3[i]; i++)
 	printf("%c ", p3[i]);
 ft_bzero(p3, 2);
 printf("\nmon bzero : \n");
-for (int i=0; p[i]; i++)
+for (int i=0; p3[i]; i++)
 	printf("%c ", p3[i]);
 char p4[] = {'a', 'b', 'c', 'd'};
 bzero(p4, 2);
 printf("\nvrai bzero : \n");
 for (int i=0; p4[i]; i++)
 	printf("%c ", p4[i]);
+
+//MEMCPY
+
+char p5[] = {'a', 'b', 'c', 'd'} ;
+printf("\n\nTEST MEMCPY :\n\n");
+for (int i=0; p5[i]; i++)
+	printf("%c ", p5[i]);
+char p6[2];
+ft_memcpy(p6, p5, 2);
+printf("\nmon memcpy : \n");
+for (int i=0; p6[i]; i++)
+	printf("%c ", p6[i]);
+char p7[2];
+memcpy(p7, p5, 2);
+printf("\nvrai memcpy : \n");
+for (int i=0; p7[i]; i++)
+	printf("%c ", p7[i]);
+
+//MEMMOVE
+char p8[] = {'a', 'b', 'c', 'd'} ;
+printf("\n\nTEST MEMMOVE :\n\n");
+for (int i=0; p8[i]; i++)
+	printf("%c ", p8[i]);
+char p9[2];
+ft_memcpy(p9, p8, 2);
+printf("\nmon memmove : \n");
+for (int i=0; p9[i]; i++)
+	printf("%c ", p9[i]);
+char p10[2];
+memcpy(p10, p8, 2);
+printf("\nvrai memmove : \n");
+for (int i=0; p10[i]; i++)
+	printf("%c ", p10[i]);
+
 }
+
+*/

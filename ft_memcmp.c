@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arvella <arvella@student.42perpignan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 16:22:24 by arvella           #+#    #+#             */
-/*   Updated: 2025/11/04 15:21:03 by arvella          ###   ########.fr       */
+/*   Created: 2025/11/04 11:53:17 by arvella           #+#    #+#             */
+/*   Updated: 2025/11/04 15:21:24 by arvella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char		*d;
-	unsigned const char	*s;
+	size_t			i;
+	unsigned char	*p1;
+	unsigned char	*p2;
 
-	d = (unsigned char *)dest;
-	s = (unsigned const char *)src;
-	while (n--)
-		*d++ = *s++;
-	*d = '\0';
-	return (dest);
+	i = 0;
+	p1 = (unsigned char *)s1;
+	p2 = (unsigned char *)s2;
+	while ((p1[i] || p2[i]) && i < n)
+	{
+		if (p1[i] != p2[i])
+			return (p1[i] - p2[i]);
+		i++;
+	}
+	return (0);
 }
