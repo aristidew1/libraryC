@@ -6,7 +6,7 @@
 /*   By: arvella <arvella@student.42perpignan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:12:27 by arvella           #+#    #+#             */
-/*   Updated: 2025/11/05 11:45:05 by arvella          ###   ########.fr       */
+/*   Updated: 2025/11/05 15:39:19 by arvella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	i;
 	size_t	j;
 
-	if (!*little || len == 0)
+	if (!*little)
+		return ((char *)big);
+	if (!*little && len <= 0)
 		return ((char *)big);
 	i = 0;
 	while (big[i] && i < len)
@@ -33,3 +35,13 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
+/*
+#include <stdio.h>
+int main()
+{
+	char haystack[30] = "aaabcabcd";
+//	char needle[10] = "aabc";
+	printf("%s\n", ft_strnstr(haystack, "c", -1));
+
+}
+*/

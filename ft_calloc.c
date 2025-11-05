@@ -6,7 +6,7 @@
 /*   By: arvella <arvella@student.42perpignan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:58:04 by arvella           #+#    #+#             */
-/*   Updated: 2025/11/05 08:28:42 by arvella          ###   ########.fr       */
+/*   Updated: 2025/11/05 16:54:52 by arvella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t			len;
 	unsigned char	*tmp;
 
+	len = nmemb * size;
+	if (len != 0)
+		if (len / nmemb != size && len != 0)
+			return (NULL);
 	if (nmemb == 0 || size == 0)
 	{
 		tmp = malloc(1);
@@ -26,7 +30,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		tmp[0] = 0;
 		return (tmp);
 	}
-	len = nmemb * size;
 	tmp = malloc(len);
 	if (!tmp)
 		return (NULL);
