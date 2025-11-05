@@ -6,7 +6,7 @@
 /*   By: arvella <arvella@student.42perpignan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 17:19:21 by arvella           #+#    #+#             */
-/*   Updated: 2025/11/05 09:17:34 by arvella          ###   ########.fr       */
+/*   Updated: 2025/11/05 12:47:46 by arvella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,6 @@ static int	word_len(const char *s, char c)
 
 static void	free_tab(char **splited, int index)
 {
-	int	i;
-
-	i = 0;
 	while (index >= 0)
 		free(splited[index--]);
 	free(splited);
