@@ -6,7 +6,7 @@
 /*   By: arvella <arvella@student.42perpignan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 15:45:36 by arvella           #+#    #+#             */
-/*   Updated: 2025/11/04 15:58:07 by arvella          ###   ########.fr       */
+/*   Updated: 2025/11/05 08:29:36 by arvella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,5 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		i++;
 	}
 	dest[i] = '\0';
+	return (dest);
 }

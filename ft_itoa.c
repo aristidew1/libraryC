@@ -6,7 +6,7 @@
 /*   By: arvella <arvella@student.42perpignan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 16:33:45 by arvella           #+#    #+#             */
-/*   Updated: 2025/11/04 17:19:03 by arvella          ###   ########.fr       */
+/*   Updated: 2025/11/05 11:02:17 by arvella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,12 @@ static long	count_len(long n)
 		n /= 10;
 		count++;
 	}
+	if (count == 0)
+		count++;
 	return (count);
 }
 
-char	*rev_tab(char *s)
+static char	*rev_tab(char *s)
 {
 	int		min;
 	int		max;
@@ -49,6 +51,13 @@ char	*rev_tab(char *s)
 	return (s);
 }
 
+static char	*zero_case(char *buf)
+{
+	buf[0] = '0';
+	buf[1] = '\0';
+	return (buf);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*buf;
@@ -59,6 +68,8 @@ char	*ft_itoa(int n)
 	buf = malloc(sizeof(char) * (count_len(nb) + 1));
 	if (!buf)
 		return (NULL);
+	if (nb == 0)
+		return (zero_case(buf));
 	i = 0;
 	if (nb < 0)
 	{

@@ -6,7 +6,7 @@
 /*   By: arvella <arvella@student.42perpignan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 10:10:57 by arvella           #+#    #+#             */
-/*   Updated: 2025/11/04 11:40:28 by arvella          ###   ########.fr       */
+/*   Updated: 2025/11/05 10:21:09 by arvella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
-		return (c + 32);
+		return (c - 32);
 	return (c);
 }

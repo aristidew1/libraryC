@@ -6,9 +6,11 @@
 /*   By: arvella <arvella@student.42perpignan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:58:04 by arvella           #+#    #+#             */
-/*   Updated: 2025/11/04 13:17:45 by arvella          ###   ########.fr       */
+/*   Updated: 2025/11/05 08:28:42 by arvella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

@@ -6,7 +6,7 @@
 /*   By: arvella <arvella@student.42perpignan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 11:53:17 by arvella           #+#    #+#             */
-/*   Updated: 2025/11/04 15:21:24 by arvella          ###   ########.fr       */
+/*   Updated: 2025/11/05 10:19:48 by arvella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	p1 = (unsigned char *)s1;
 	p2 = (unsigned char *)s2;
-	while ((p1[i] || p2[i]) && i < n)
+	while (i < n)
 	{
 		if (p1[i] != p2[i])
 			return (p1[i] - p2[i]);

@@ -6,9 +6,11 @@
 /*   By: arvella <arvella@student.42perpignan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 11:34:26 by arvella           #+#    #+#             */
-/*   Updated: 2025/11/04 15:23:35 by arvella          ###   ########.fr       */
+/*   Updated: 2025/11/05 09:18:23 by arvella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

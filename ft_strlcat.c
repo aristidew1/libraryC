@@ -6,7 +6,7 @@
 /*   By: arvella <arvella@student.42perpignan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 09:54:53 by arvella           #+#    #+#             */
-/*   Updated: 2025/11/04 15:23:02 by arvella          ###   ########.fr       */
+/*   Updated: 2025/11/05 10:25:46 by arvella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	if (size == 0)
 		return (s_len);
 	d_len = ft_strlen(dst);
+	if (size <= d_len)
+		return (size + s_len);
 	i = 0;
 	while (src[i] && d_len + i + 1 < size)
 	{

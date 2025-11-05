@@ -1,20 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arvella <arvella@student.42perpignan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/04 10:13:55 by arvella           #+#    #+#             */
-/*   Updated: 2025/11/05 10:21:31 by arvella          ###   ########.fr       */
+/*   Created: 2025/11/05 09:20:31 by arvella           #+#    #+#             */
+/*   Updated: 2025/11/05 09:31:33 by arvella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	return (c);
+	int		len;
+	int		i;
+	int		j;
+	char	*dest;
+
+	if (!s1 || !s2)
+		return (NULL);
+	len = ft_strlen(s1) + ft_strlen(s2);
+	dest = malloc(sizeof(char) * (len + 1));
+	if (!dest)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (s1[j])
+		dest[i++] = s1[j++];
+	j = 0;
+	while (s2[j])
+		dest[i++] = s2[j++];
+	dest[i] = '\0';
+	return (dest);
 }

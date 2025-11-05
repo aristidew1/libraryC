@@ -6,7 +6,7 @@
 /*   By: arvella <arvella@student.42perpignan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 13:18:07 by arvella           #+#    #+#             */
-/*   Updated: 2025/11/04 15:20:16 by arvella          ###   ########.fr       */
+/*   Updated: 2025/11/05 10:39:21 by arvella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strdup(const char *s)
 
 	len = ft_strlen(s);
 	dest = malloc(sizeof(char) * (len + 1));
+	if (!dest)
+		return (NULL);
 	i = -1;
 	while (s[++i])
 		dest[i] = s[i];
