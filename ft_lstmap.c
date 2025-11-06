@@ -1,39 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arvella <arvella@student.42perpignan.      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 07:51:38 by arvella           #+#    #+#             */
-/*   Updated: 2025/11/06 14:58:19 by arvella          ###   ########.fr       */
+/*   Created: 2025/11/06 11:32:58 by arvella           #+#    #+#             */
+/*   Updated: 2025/11/06 13:25:00 by arvella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	char	*dest;
-	size_t	i;
-	size_t	s_len;
+	t_list	*n_list;
+	t_list	*n_node;
 
-	if (!s)
+	if (!lst || !f || !del)
 		return (NULL);
-	s_len = ft_strlen(s);
-	if (start > s_len)
-		return (ft_strdup(""));
-	if (len > s_len - start)
-		len = s_len - start;
-	dest = malloc(sizeof(char) * (len + 1));
-	if (!dest)
-		return (NULL);
-	i = 0;
-	while (s[start + i] && len--)
+	n_list = NULL;
+	while (lst)
 	{
-		dest[i] = s[start + i];
-		i++;
+		n_node = ft_lstnew(f(lst->content));
+		if (!n_node)
+		{
+			ft_lstclear(&n_list, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&n_list, n_node);
+		lst = lst->next;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (n_list);
 }
